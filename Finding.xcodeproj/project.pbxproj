@@ -6,6 +6,13 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B0C6AAF30681046008944CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C6AAE30681046008944CD /* GoogleService-Info.plist */; };
+		3B0C6AB030681046008944CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C6AAE30681046008944CD /* GoogleService-Info.plist */; };
+		3B0C6AB130681046008944CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B0C6AAE30681046008944CD /* GoogleService-Info.plist */; };
+		3B46B317308E9C72004D823A /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 3B46B316308E9C72004D823A /* FirebaseCore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3B0C6A8E30680C73008944CD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +34,7 @@
 		3B0C6A8030680C72008944CD /* Finding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Finding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0C6A8D30680C73008944CD /* FindingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0C6A9730680C73008944CD /* FindingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0C6AAE30681046008944CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -51,6 +59,7 @@
 		3B0C6A7D30680C72008944CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				3B46B317308E9C72004D823A /* FirebaseCore in Frameworks */,
 			);
 		};
 		3B0C6A8A30680C73008944CD /* Frameworks */ = {
@@ -69,9 +78,11 @@
 		3B0C6A7730680C72008944CD = {
 			isa = PBXGroup;
 			children = (
+				3B0C6AAE30681046008944CD /* GoogleService-Info.plist */,
 				3B0C6A8230680C72008944CD /* Finding */,
 				3B0C6A9030680C73008944CD /* FindingTests */,
 				3B0C6A9A30680C73008944CD /* FindingUITests */,
+				3B46B315308E9C72004D823A /* Frameworks */,
 				3B0C6A8130680C72008944CD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +95,13 @@
 				3B0C6A9730680C73008944CD /* FindingUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B46B315308E9C72004D823A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +121,9 @@
 				3B0C6A8230680C72008944CD /* Finding */,
 			);
 			name = Finding;
+			packageProductDependencies = (
+				3B46B316308E9C72004D823A /* FirebaseCore */,
+			);
 			productName = Finding;
 			productReference = 3B0C6A8030680C72008944CD /* Finding.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +202,9 @@
 			);
 			mainGroup = 3B0C6A7730680C72008944CD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				3B0C6AC730692BF5008944CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B0C6A8130680C72008944CD /* Products */;
 			projectDirPath = "";
@@ -197,16 +221,19 @@
 		3B0C6A7E30680C72008944CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				3B0C6AB130681046008944CD /* GoogleService-Info.plist in Resources */,
 			);
 		};
 		3B0C6A8B30680C73008944CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				3B0C6AB030681046008944CD /* GoogleService-Info.plist in Resources */,
 			);
 		};
 		3B0C6A9530680C73008944CD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				3B0C6AAF30681046008944CD /* GoogleService-Info.plist in Resources */,
 			);
 		};
 /* End PBXResourcesBuildPhase section */
@@ -367,8 +394,9 @@
 		3B0C6AA030680C73008944CD /* Debug configuration for PBXNativeTarget "Finding" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = FindingLogo;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8LFUX3F254;
@@ -379,6 +407,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -387,6 +416,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewe420.Finding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -399,8 +431,9 @@
 		3B0C6AA130680C73008944CD /* Release configuration for PBXNativeTarget "Finding" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = FindingLogo;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8LFUX3F254;
@@ -411,6 +444,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -419,6 +453,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewe420.Finding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -441,6 +478,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewe420.FindingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -463,6 +504,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ewe420.FindingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -548,6 +593,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3B0C6AC730692BF5008944CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.19.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3B46B316308E9C72004D823A /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3B0C6AC730692BF5008944CD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3B0C6A7830680C72008944CD /* Project object */;
 	validationLevel = 1;
